@@ -22,7 +22,8 @@
         <div formArrayName="hobbies">
           <h4>Your Hobbies</h4>
           <button class="btn btn-default" type="button" (click)="onAddHobby()">Add Hobby</button>
-          <div class="form-group">
+          <!-- Ignore the error/warning. -->
+          <div class="form-group" *ngFor="let hobbyControl of signupForm.get('hobbies').controls">
             <input type="text" />
           </div>
         </div>
