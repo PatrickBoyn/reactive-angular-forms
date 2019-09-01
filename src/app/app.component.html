@@ -19,7 +19,7 @@
         <div class="radio" *ngFor="let gender of genders">
           <label> <input type="radio" [value]="gender" formControlName="gender" />{{ gender }} </label>
         </div>
-        <div>
+        <div formArrayName="hobbies">
           <h4>Your Hobbies</h4>
           <button class="btn btn-default" type="button" (click)="onAddHobby()">Add Hobby</button>
         </div>
